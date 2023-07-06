@@ -1,9 +1,11 @@
 import React from 'react';
+import Tabbed from './Tabbed';
+import { contents } from './contents';
 
 function App() {
   return (
     <div>
-      ToDo
+      <Tabbed contents={contents} />
     </div>
   );
 }
