@@ -18,7 +18,9 @@ const Tabbed: React.FC<TabbedProp> = ({ contents }) => {
         <Tab num={3} activeTab={activeTab} onClick={setActiveTab} />
       </div>
       {activeTab <= 2 ? (
-        <TabContent item={contents.at(activeTab)} />
+        <TabContent
+          key={contents.at(activeTab)?.summary}
+          item={contents.at(activeTab)} />
       ) : (
         <DifferentContent />
       )}
